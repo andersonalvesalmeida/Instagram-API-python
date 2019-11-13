@@ -13,5 +13,6 @@ setup(
     install_requires=[
         "requests==2.11.1",
         "requests-toolbelt==0.7.0",
-        "moviepy==0.2.3.2"
+        "moviepy==0.2.3.2",
+        "requests.cookies"
     ])
