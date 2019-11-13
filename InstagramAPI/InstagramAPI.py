@@ -16,7 +16,7 @@ from datetime import datetime
 import calendar
 import os
 from requests_toolbelt import MultipartEncoder
-# from requests.cookies import cookiejar_from_dict
+from requests.cookies import cookiejar_from_dict
 
 # Turn off InsecureRequestWarning
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
@@ -95,7 +95,7 @@ class InstagramAPI:
         self.uuid = kwargs.get("uuid")
         self.USER_AGENT = kwargs.get("user_agent")
         self.device_id = kwargs.get("device_id")
-        # self.s.cookies = cookiejar_from_dict(kwargs.get("session", {}))
+        self.s.cookies = cookiejar_from_dict(kwargs.get("session", {}))
         self.isLoggedIn = True
 
     def login(self, force=False):
